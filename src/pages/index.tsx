@@ -52,9 +52,9 @@ function Home() {
                         date={event.date}
                         image={{
                           alt: '',
-                          height: event?.imageHeight,
-                          url: event?.imageFileId && getPreviewByImageId(event?.imageFileId),
-                          width: event?.imageWidth
+                          height: event?.imageHeight as number,
+                          url: (event?.imageFileId && getPreviewByImageId(event?.imageFileId)) as string,
+                          width: event?.imageWidth as number
                         }}
                         location={event.location}
                         name={event.name}
